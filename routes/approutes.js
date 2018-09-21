@@ -49,7 +49,6 @@ router.get('/', function(req, res, next) {
  * 
  */
 router.get('/file', function(req, res, next) {
-    res.sendFile(filePath);
     fs.exists(filePath, function(exists) {
         if (exists) {
             res.set({
